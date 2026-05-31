@@ -1,0 +1,1453 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第一二三課・聽寫練習 ・ ディクテーション</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #e5e8e1;
+    --bg-deep: #cdd1c5;
+    --paper: #f5f7ef;
+    --ink: #1d2118;
+    --ink-soft: #3e4337;
+    --ink-faint: #80836f;
+    --sumi: #2a3520;
+    --sumi-deep: #1a2110;
+    --kaki: #b85e2d;
+    --gold: #9a7c4f;
+    --green: #5a7a4e;
+    --line: #c2c6b3;
+    --line-soft: #dadcc7;
+
+    --m0: #e8e8d8;
+    --m1: #d6d4b6;
+    --m2: #bcbb87;
+    --m3: #8e9560;
+    --m4: #647042;
+    --m5: #3f4f2a;
+    --m6: #1a2110;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Crimson Pro', 'Shippori Mincho', serif;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    background-image:
+      radial-gradient(at 12% 8%, rgba(42,53,32,0.05) 0px, transparent 50%),
+      radial-gradient(at 88% 92%, rgba(184,94,45,0.04) 0px, transparent 50%);
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.35;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.4 0 0 0 0 0.42 0 0 0 0 0.35 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    z-index: 0;
+  }
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 44px 32px 100px;
+    position: relative;
+    z-index: 1;
+  }
+
+  header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 32px;
+  }
+  .title-block { flex: 1; }
+  .eyebrow {
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 10px;
+  }
+  h1 {
+    font-family: 'Shippori Mincho', serif;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 1.1;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  h1 .small {
+    font-size: 18px;
+    color: var(--ink-soft);
+    font-weight: 500;
+    display: block;
+    margin-top: 8px;
+    letter-spacing: 0.04em;
+  }
+  .seal {
+    width: 84px;
+    height: 84px;
+    border: 2.5px solid var(--sumi);
+    color: var(--sumi);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Shippori Mincho', serif;
+    font-weight: 700;
+    transform: rotate(-3deg);
+    flex-shrink: 0;
+    margin-left: 24px;
+    background: rgba(42,53,32,0.04);
+  }
+  .seal .h-top { font-size: 11px; letter-spacing: 0.1em; line-height: 1; }
+  .seal .h-big { font-size: 22px; line-height: 1; margin-top: 4px; font-weight: 800; }
+  .seal .h-bottom { font-size: 11px; letter-spacing: 0.1em; margin-top: 4px; }
+
+  .quick-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+  .stat-card {
+    background: var(--paper);
+    border: 1px solid var(--line-soft);
+    padding: 14px 18px;
+  }
+  .stat-card .label {
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+    font-size: 11px;
+    color: var(--ink-faint);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .stat-card .value {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1;
+  }
+  .stat-card .value .unit { font-size: 13px; color: var(--ink-faint); font-weight: 400; margin-left: 4px; }
+  .stat-card .value.sumi { color: var(--sumi); }
+  .stat-card .value.green { color: var(--green); }
+  .stat-card .value.kaki { color: var(--kaki); }
+
+  /* Range filters */
+  .range-controls {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    padding: 22px 24px;
+    margin-bottom: 24px;
+  }
+  .range-controls h3 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 16px;
+    color: var(--ink);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .range-controls h3::before {
+    content: '範';
+    background: var(--sumi);
+    color: white;
+    width: 26px;
+    height: 26px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    border-radius: 3px;
+  }
+  .range-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .range-row:last-child { margin-bottom: 0; }
+  .range-row .row-label {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 13px;
+    color: var(--ink-soft);
+    min-width: 60px;
+  }
+  .pill {
+    background: var(--bg);
+    border: 1px solid var(--line);
+    color: var(--ink-soft);
+    padding: 7px 16px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-family: 'Shippori Mincho', serif;
+    font-size: 13px;
+    transition: all 0.2s;
+  }
+  .pill:hover { border-color: var(--ink-faint); color: var(--ink); }
+  .pill.active { background: var(--sumi); color: var(--paper); border-color: var(--sumi); }
+  .pill.kaki.active { background: var(--kaki); border-color: var(--kaki); }
+
+  .tabs {
+    display: flex;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--line);
+    overflow-x: auto;
+  }
+  .tab {
+    background: none;
+    border: none;
+    padding: 14px 20px;
+    font-family: 'Shippori Mincho', serif;
+    font-size: 16px;
+    color: var(--ink-faint);
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s;
+    white-space: nowrap;
+    font-weight: 500;
+  }
+  .tab:hover { color: var(--ink); }
+  .tab.active { color: var(--ink); font-weight: 600; }
+  .tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 20px;
+    right: 20px;
+    height: 2px;
+    background: var(--sumi);
+  }
+  .tab .num { font-family: 'Crimson Pro', serif; font-style: italic; font-size: 12px; color: var(--ink-faint); margin-right: 8px; }
+
+  .panel { display: none; animation: fadeIn 0.4s ease; }
+  .panel.active { display: block; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+  .panel-intro {
+    background: var(--paper);
+    border: 1px solid var(--line-soft);
+    padding: 18px 22px;
+    margin-bottom: 24px;
+    border-left: 3px solid var(--sumi);
+  }
+  .panel-intro h2 { font-family: 'Shippori Mincho', serif; font-size: 20px; color: var(--ink); margin-bottom: 4px; }
+  .panel-intro p { color: var(--ink-soft); font-size: 14px; line-height: 1.6; }
+
+  /* DICTATION FLASHCARD - the main feature */
+  .dictation-stage {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    padding: 40px 30px;
+    text-align: center;
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .dictation-progress {
+    position: absolute;
+    top: 18px;
+    left: 22px;
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+    color: var(--ink-faint);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+  }
+  .dictation-meta {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+    font-size: 12px;
+    color: var(--ink-faint);
+  }
+  .dictation-meta .mast-bar {
+    display: inline-block;
+    margin-left: 6px;
+    width: 60px;
+    height: 6px;
+    background: var(--bg-deep);
+    border-radius: 3px;
+    overflow: hidden;
+    vertical-align: middle;
+  }
+  .dictation-meta .mast-bar div { height: 100%; background: var(--sumi); transition: width 0.3s; }
+
+  .lesson-badge {
+    display: inline-block;
+    background: var(--sumi);
+    color: var(--paper);
+    font-family: 'Shippori Mincho', serif;
+    font-size: 13px;
+    padding: 5px 14px;
+    border-radius: 3px;
+    margin-bottom: 30px;
+    letter-spacing: 0.05em;
+  }
+
+  /* FRONT: just audio */
+  .audio-front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+  }
+  .big-play-btn {
+    background: var(--sumi);
+    color: var(--paper);
+    border: none;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 50px;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 20px rgba(42,53,32,0.2);
+  }
+  .big-play-btn:hover { background: var(--sumi-deep); transform: scale(1.04); }
+  .big-play-btn:active { transform: scale(0.97); }
+  .big-play-btn.speaking { animation: pulse 1s infinite; }
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 6px 20px rgba(42,53,32,0.2); }
+    50% { transform: scale(1.06); box-shadow: 0 10px 30px rgba(42,53,32,0.35); }
+  }
+  .play-hint {
+    font-family: 'Shippori Mincho', serif;
+    color: var(--ink-faint);
+    font-size: 14px;
+    letter-spacing: 0.05em;
+  }
+  .play-count {
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+    color: var(--ink-faint);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+  }
+  .replay-controls {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 4px;
+  }
+  .speed-btn {
+    background: var(--bg);
+    border: 1px solid var(--line);
+    color: var(--ink-soft);
+    padding: 6px 14px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+    font-size: 13px;
+    transition: all 0.2s;
+  }
+  .speed-btn:hover { border-color: var(--sumi); color: var(--sumi); }
+  .speed-btn.active { background: var(--sumi); color: var(--paper); border-color: var(--sumi); }
+
+  /* Typing input area */
+  .typing-area {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 28px;
+  }
+  .typing-input {
+    width: 100%;
+    background: var(--bg);
+    border: 1.5px solid var(--line);
+    border-radius: 3px;
+    padding: 14px 18px;
+    font-family: 'Shippori Mincho', serif;
+    font-size: 20px;
+    color: var(--ink);
+    outline: none;
+    transition: border-color 0.2s;
+    text-align: center;
+  }
+  .typing-input:focus { border-color: var(--sumi); }
+  .typing-input::placeholder { color: var(--ink-faint); font-style: italic; font-size: 16px; }
+  .typing-hint {
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+    color: var(--ink-faint);
+    font-size: 12px;
+    margin-top: 8px;
+  }
+
+  /* BACK: answer reveal */
+  .answer-reveal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+    max-width: 720px;
+  }
+  .answer-jp {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 32px;
+    color: var(--ink);
+    line-height: 1.4;
+    background: var(--bg);
+    padding: 24px 28px;
+    border-radius: 4px;
+    border-left: 4px solid var(--sumi);
+    width: 100%;
+    word-break: keep-all;
+  }
+  .answer-cn {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 17px;
+    color: var(--ink-soft);
+    padding: 12px 16px;
+    background: rgba(154,124,79,0.08);
+    border-radius: 3px;
+    width: 100%;
+  }
+  .user-attempt {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 16px;
+    color: var(--ink-soft);
+    padding: 12px 16px;
+    background: var(--bg-deep);
+    border-radius: 3px;
+    width: 100%;
+    line-height: 1.5;
+    border: 1px dashed var(--line);
+  }
+  .user-attempt .lbl {
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+    color: var(--ink-faint);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    margin-right: 8px;
+    text-transform: uppercase;
+  }
+  .diff-mark { background: rgba(184,94,45,0.2); padding: 0 2px; border-radius: 2px; color: var(--kaki); }
+  .diff-mark.correct { background: rgba(90,122,78,0.15); color: var(--green); }
+
+  .reveal-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .fc-btn {
+    background: var(--ink);
+    color: var(--paper);
+    border: none;
+    padding: 14px 30px;
+    font-family: 'Shippori Mincho', serif;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 3px;
+  }
+  .fc-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+  .fc-btn.show { background: var(--sumi); }
+  .fc-btn.wrong { background: var(--kaki); }
+  .fc-btn.right { background: var(--green); }
+  .fc-btn.replay {
+    background: var(--bg);
+    color: var(--ink);
+    border: 1px solid var(--line);
+  }
+  .fc-btn.replay:hover { background: var(--paper); }
+
+  /* Browse mode list */
+  .browse-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .browse-item {
+    background: var(--paper);
+    border: 1px solid var(--line-soft);
+    padding: 16px 20px;
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    gap: 14px;
+    align-items: center;
+    transition: all 0.2s;
+  }
+  .browse-item:hover { border-color: var(--sumi); }
+  .browse-item.speaking { background: rgba(42,53,32,0.04); border-color: var(--sumi); }
+  .browse-item .lesson-tag {
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+    color: var(--sumi);
+    font-size: 12px;
+    background: var(--bg-deep);
+    padding: 3px 10px;
+    border-radius: 2px;
+    min-width: 32px;
+    text-align: center;
+  }
+  .browse-item .content { flex: 1; }
+  .browse-item .jp {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 18px;
+    color: var(--ink);
+    margin-bottom: 4px;
+    line-height: 1.4;
+  }
+  .browse-item .cn {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+  .browse-item .mastery-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--m0);
+  }
+  .browse-item .play-btn {
+    background: var(--sumi);
+    color: var(--paper);
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s;
+  }
+  .browse-item .play-btn:hover { background: var(--sumi-deep); transform: scale(1.08); }
+
+  /* PROGRESS */
+  .progress-section { margin-bottom: 32px; }
+  .progress-section h3 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 18px;
+    color: var(--ink);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .progress-section h3 .meta {
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+    color: var(--ink-faint);
+    font-size: 13px;
+    font-weight: 400;
+  }
+  .mastery-legend {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 16px;
+    font-family: 'Crimson Pro', serif;
+    font-size: 12px;
+    color: var(--ink-faint);
+    font-style: italic;
+    flex-wrap: wrap;
+  }
+  .mastery-legend .item { display: flex; align-items: center; gap: 5px; }
+  .mastery-legend .box { width: 14px; height: 14px; border-radius: 2px; border: 1px solid var(--line); }
+  .heatmap {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 6px;
+  }
+  .heatmap .hcard {
+    background: var(--m0);
+    border: 1px solid var(--line);
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: transform 0.15s;
+    min-height: 60px;
+  }
+  .heatmap .hcard:hover { transform: scale(1.04); z-index: 5; }
+  .heatmap .hcard .hc-jp {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 13px;
+    line-height: 1.3;
+  }
+  .heatmap .hcard .hc-num {
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+    font-size: 9px;
+    margin-bottom: 3px;
+    opacity: 0.7;
+  }
+  .heatmap .hcard[data-mastery="0"] { background: var(--m0); color: var(--ink-soft); }
+  .heatmap .hcard[data-mastery="1"] { background: var(--m1); color: var(--ink); }
+  .heatmap .hcard[data-mastery="2"] { background: var(--m2); color: var(--ink); }
+  .heatmap .hcard[data-mastery="3"] { background: var(--m3); color: var(--paper); }
+  .heatmap .hcard[data-mastery="4"] { background: var(--m4); color: var(--paper); }
+  .heatmap .hcard[data-mastery="5"] { background: var(--m5); color: var(--paper); }
+  .heatmap .hcard[data-mastery="6"] { background: var(--m6); color: var(--paper); }
+
+  .danger-zone {
+    background: rgba(184,94,45,0.06);
+    border: 1px dashed var(--kaki);
+    padding: 20px;
+    margin-top: 30px;
+  }
+  .danger-zone h3 { color: var(--kaki); margin-bottom: 8px; border: none; }
+  .danger-zone p { font-size: 13px; color: var(--ink-soft); margin-bottom: 12px; font-family: 'Shippori Mincho', serif; }
+  .reset-btn { background: var(--kaki); color: white; border: none; padding: 10px 20px; font-family: 'Shippori Mincho', serif; font-size: 14px; cursor: pointer; border-radius: 3px; }
+  .reset-btn:hover { background: #9c5023; }
+
+  .settings-bar {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-family: 'Shippori Mincho', serif;
+    font-size: 13px;
+    color: var(--ink-soft);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    z-index: 100;
+    border-radius: 4px;
+  }
+  .settings-bar label { display: flex; align-items: center; gap: 6px; }
+  .settings-bar select { background: var(--bg); border: 1px solid var(--line); padding: 3px 8px; font-family: inherit; font-size: 12px; color: var(--ink); max-width: 130px; }
+
+  footer {
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    text-align: center;
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--ink-faint);
+    letter-spacing: 0.05em;
+  }
+  footer .dash { color: var(--sumi); margin: 0 10px; }
+
+  .done-card {
+    background: var(--paper);
+    border: 1px solid var(--green);
+    padding: 50px 30px;
+    text-align: center;
+    border-radius: 4px;
+  }
+  .done-card h2 { font-family: 'Shippori Mincho', serif; font-size: 26px; color: var(--green); margin-bottom: 14px; }
+  .done-card p { color: var(--ink-soft); margin-bottom: 24px; font-family: 'Shippori Mincho', serif; }
+  .done-card .next-time { background: var(--bg-deep); padding: 14px 20px; border-radius: 3px; color: var(--ink-soft); font-size: 13px; margin: 20px 0; display: inline-block; font-family: 'Shippori Mincho', serif; }
+
+  /* keyboard hint */
+  .kb-hint {
+    position: absolute;
+    bottom: 18px;
+    left: 22px;
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+    color: var(--ink-faint);
+    font-size: 11px;
+    letter-spacing: 0.05em;
+  }
+  .kb-hint kbd {
+    background: var(--bg-deep);
+    border: 1px solid var(--line);
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-family: 'Crimson Pro', serif;
+    font-size: 10px;
+    margin: 0 2px;
+  }
+
+  @media (max-width: 700px) {
+    .container { padding: 28px 16px 120px; }
+    header { flex-direction: column; }
+    .seal { margin-left: 0; margin-top: 16px; }
+    h1 { font-size: 28px; }
+    h1 .small { font-size: 14px; }
+    .quick-stats { grid-template-columns: 1fr 1fr; }
+    .big-play-btn { width: 130px; height: 130px; font-size: 40px; }
+    .answer-jp { font-size: 22px; padding: 18px 20px; }
+    .browse-item { grid-template-columns: 1fr; gap: 8px; }
+    .browse-item .lesson-tag { justify-self: start; }
+    .heatmap { grid-template-columns: 1fr 1fr; }
+    .kb-hint { display: none; }
+    .settings-bar { bottom: 0; right: 0; left: 0; border-radius: 0; justify-content: center; flex-wrap: wrap; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <div class="title-block">
+      <div class="eyebrow">Lesson 1-3 Dictation Practice · 聽寫</div>
+      <h1>
+        ディクテーション・聽寫練習
+        <span class="small">第一二三課所有日文句子 ・ 聽 → 默寫 → 對答案</span>
+      </h1>
+    </div>
+    <div class="seal">
+      <div class="h-top">聽寫</div>
+      <div class="h-big">復習</div>
+      <div class="h-bottom">L1-3</div>
+    </div>
+  </header>
+
+  <div class="quick-stats" id="quick-stats"></div>
+
+  <nav class="tabs">
+    <button class="tab active" data-tab="dictation"><span class="num">壹</span>聽寫練習</button>
+    <button class="tab" data-tab="browse"><span class="num">貳</span>所有句子</button>
+    <button class="tab" data-tab="progress"><span class="num">參</span>進度</button>
+  </nav>
+
+  <!-- DICTATION PANEL -->
+  <div class="panel active" id="panel-dictation">
+    <div class="panel-intro">
+      <h2>聽寫練習（依間隔重複排程）</h2>
+      <p>正面只給聲音，請聽完後在輸入框寫出平假名（或在心裡默寫），然後揭曉答案比對。系統會自動依艾賓豪斯曲線安排複習：答對的句子間隔變長（10分→1時→1日→3日→7日→14日→30日），答錯拉回近期。</p>
+    </div>
+
+    <div class="range-controls">
+      <h3>複習範圍</h3>
+      <div class="range-row">
+        <span class="row-label">課次：</span>
+        <button class="pill active" data-lesson="1">第一課 <span style="opacity:0.7;font-style:italic;">26</span></button>
+        <button class="pill active" data-lesson="2">第二課 <span style="opacity:0.7;font-style:italic;">25</span></button>
+        <button class="pill active" data-lesson="3">第三課 <span style="opacity:0.7;font-style:italic;">25</span></button>
+      </div>
+      <div class="range-row">
+        <span class="row-label">難度：</span>
+        <button class="pill active" data-diff="short">短句</button>
+        <button class="pill active" data-diff="medium">中等</button>
+        <button class="pill active" data-diff="long">長句</button>
+      </div>
+      <div class="range-row">
+        <span class="row-label">優先：</span>
+        <button class="pill kaki active" data-prio="due">SRS 排程</button>
+        <button class="pill kaki" data-prio="weak">最弱優先</button>
+        <button class="pill kaki" data-prio="random">完全隨機</button>
+      </div>
+    </div>
+
+    <div id="dictation-area"></div>
+  </div>
+
+  <!-- BROWSE PANEL -->
+  <div class="panel" id="panel-browse">
+    <div class="panel-intro">
+      <h2>所有句子總覽（76 句）</h2>
+      <p>列出第一二三課所有日文句子（全平假名），點 ♪ 即聽。可用上方範圍篩選。</p>
+    </div>
+    <div class="range-controls" style="margin-bottom: 18px;">
+      <div class="range-row">
+        <span class="row-label">顯示：</span>
+        <button class="pill active" data-bl="1">第一課</button>
+        <button class="pill active" data-bl="2">第二課</button>
+        <button class="pill active" data-bl="3">第三課</button>
+      </div>
+    </div>
+    <div id="browse-area" class="browse-list"></div>
+  </div>
+
+  <!-- PROGRESS PANEL -->
+  <div class="panel" id="panel-progress">
+    <div class="panel-intro">
+      <h2>學習進度</h2>
+      <p>每個句子的熟練度由顏色表示。連續答對升級，答錯降級。點任何卡片可立即聽發音。</p>
+    </div>
+    <div class="mastery-legend">
+      <span>熟練度：</span>
+      <div class="item"><div class="box" style="background:var(--m0)"></div>未練 0</div>
+      <div class="item"><div class="box" style="background:var(--m1)"></div>1</div>
+      <div class="item"><div class="box" style="background:var(--m2)"></div>2</div>
+      <div class="item"><div class="box" style="background:var(--m3)"></div>3</div>
+      <div class="item"><div class="box" style="background:var(--m4)"></div>4</div>
+      <div class="item"><div class="box" style="background:var(--m5)"></div>5</div>
+      <div class="item"><div class="box" style="background:var(--m6)"></div>精熟 6+</div>
+    </div>
+    <div id="progress-content"></div>
+    <div class="danger-zone">
+      <h3>重置聽寫資料</h3>
+      <p>清除聽寫練習所有熟練度紀錄，重新開始（無法復原；不影響第一二三課其他工具的資料）。</p>
+      <button class="reset-btn" id="reset-all">⚠ 清除聽寫資料</button>
+    </div>
+  </div>
+
+  <footer>
+    Dictation Practice <span class="dash">·</span> 第一二三課 76 sentences <span class="dash">·</span> 聞いて書く・記憶曲線
+  </footer>
+</div>
+
+<div class="settings-bar">
+  <label>聲音：<select id="voice-select"><option>載入中…</option></select></label>
+</div>
+
+<script>
+/* ============================================================
+   STORAGE
+============================================================ */
+const storage = {
+  _mem: {},
+  get(key) { try { return localStorage.getItem(key); } catch (e) { return this._mem[key]; } },
+  set(key, value) { try { localStorage.setItem(key, value); } catch (e) { this._mem[key] = value; } },
+  remove(key) { try { localStorage.removeItem(key); } catch (e) { delete this._mem[key]; } }
+};
+
+/* ============================================================
+   SENTENCES — Complete L1-L3
+   All in hiragana (with katakana for loanwords/places)
+============================================================ */
+const SENTENCES = [
+  // ============ LESSON 1 ============
+  // A は B です (基本肯定)
+  { id: 'l1s01', lesson: 1, jp: 'わたしは たいわんじんです。', cn: '我是台灣人。' },
+  { id: 'l1s02', lesson: 1, jp: 'せんせいは にほんじんです。', cn: '老師是日本人。' },
+  { id: 'l1s03', lesson: 1, jp: 'わたしは かいしゃいんです。', cn: '我是公司員工。' },
+  { id: 'l1s04', lesson: 1, jp: 'にほんごは おもしろいです。', cn: '日文很有趣。' },
+  { id: 'l1s05', lesson: 1, jp: 'にほんごは ほんとうに おもしろいです。', cn: '日文真的很有趣。' },
+  // い形容詞否定
+  { id: 'l1s06', lesson: 1, jp: 'かのじょは かわいくないです。', cn: '女朋友不可愛。' },
+  { id: 'l1s07', lesson: 1, jp: 'しおラーメンは おいしくないです。', cn: '鹽味拉麵不好吃。' },
+  // 名詞否定 4 種
+  { id: 'l1s08', lesson: 1, jp: 'わたしは せんせいではありません。', cn: '我不是老師。（最正式）' },
+  { id: 'l1s09', lesson: 1, jp: 'わたしは せんせいじゃありません。', cn: '我不是老師。（正式口語）' },
+  { id: 'l1s10', lesson: 1, jp: 'わたしは せんせいではないです。', cn: '我不是老師。（口語）' },
+  { id: 'l1s11', lesson: 1, jp: 'わたしは せんせいじゃないです。', cn: '我不是老師。（最口語）' },
+  { id: 'l1s12', lesson: 1, jp: 'わたしは にほんじんではありません。', cn: '我不是日本人。' },
+  // 疑問・回答
+  { id: 'l1s13', lesson: 1, jp: 'せんせいは たいわんじんですか。', cn: '老師是台灣人嗎？' },
+  { id: 'l1s14', lesson: 1, jp: 'はい、たいわんじんです。', cn: '是的，是台灣人。' },
+  { id: 'l1s15', lesson: 1, jp: 'いいえ、たいわんじんではありません。', cn: '不，不是台灣人。' },
+  { id: 'l1s16', lesson: 1, jp: 'そうです。', cn: '沒錯。' },
+  { id: 'l1s17', lesson: 1, jp: 'あの、にほんのかたですか。', cn: '請問，您是日本人嗎？（禮貌）' },
+  // 形容詞対話
+  { id: 'l1s18', lesson: 1, jp: 'にほんの せいふくは かわいいですか。', cn: '日本制服可愛嗎？' },
+  { id: 'l1s19', lesson: 1, jp: 'わたしは にほんの せいふくが だいすきです。', cn: '我超喜歡日本制服。' },
+  { id: 'l1s20', lesson: 1, jp: 'たいわんの けっこんは むずかしいですか。', cn: '台灣的結婚很難嗎？' },
+  // 疑問詞
+  { id: 'l1s21', lesson: 1, jp: 'あの ひとは だれですか。', cn: '那個人是誰？' },
+  { id: 'l1s22', lesson: 1, jp: 'あの かたは どなたですか。', cn: '那位是哪位？（禮貌）' },
+  { id: 'l1s23', lesson: 1, jp: 'たろうちゃんは なんさいですか。', cn: '小太郎幾歲？' },
+  { id: 'l1s24', lesson: 1, jp: 'きゅうさいです。', cn: '9 歲。' },
+  // の・も
+  { id: 'l1s25', lesson: 1, jp: 'かれは ヒタチの しゃいんです。', cn: '他是 HITACHI 的員工。' },
+  { id: 'l1s26', lesson: 1, jp: 'すずきいちろうは にほんじんです。さくらいしょうも にほんじんです。', cn: '鈴木一郎是日本人。櫻井翔也是日本人。' },
+
+  // ============ LESSON 2 ============
+  // これ系列・基本
+  { id: 'l2s01', lesson: 2, jp: 'これは わたしの がくせいしょうです。', cn: '這是我的學生證。' },
+  { id: 'l2s02', lesson: 2, jp: 'これは なんですか。', cn: '這是什麼？' },
+  { id: 'l2s03', lesson: 2, jp: 'つくえです。', cn: '是桌子。' },
+  { id: 'l2s04', lesson: 2, jp: 'それは わたしの かさです。', cn: '那是我的雨傘。' },
+  { id: 'l2s05', lesson: 2, jp: 'それは なんですか。', cn: '那是什麼？' },
+  { id: 'l2s06', lesson: 2, jp: 'それは わたしの めいしです。', cn: '那是我的名片。' },
+  { id: 'l2s07', lesson: 2, jp: 'あれは ようめいさんです。', cn: '那是陽明山。' },
+  { id: 'l2s08', lesson: 2, jp: 'これは にほんりょうりですよ。', cn: '這是日本料理喔。' },
+  { id: 'l2s09', lesson: 2, jp: 'これは おいしい にほんりょうりですよ。', cn: '這是好吃的日本料理喔。' },
+  { id: 'l2s10', lesson: 2, jp: 'それは おもしろい えいがですか。', cn: '那是有趣的電影嗎？' },
+  // どれ
+  { id: 'l2s11', lesson: 2, jp: 'わたしの やきにくていしょくは どれですか。', cn: '我的烤肉定食是哪一個？' },
+  // 選擇疑問
+  { id: 'l2s12', lesson: 2, jp: 'にほんごの せんせいは にほんじんですか、たいわんじんですか。', cn: '日文老師是日本人，還是台灣人？' },
+  { id: 'l2s13', lesson: 2, jp: 'にほんじんです。', cn: '是日本人。' },
+  // なんの～
+  { id: 'l2s14', lesson: 2, jp: 'すみません、それは なんの ほんですか。', cn: '請問，那是什麼書？' },
+  { id: 'l2s15', lesson: 2, jp: 'これは じどうしゃの ほんです。', cn: '這是汽車的書。' },
+  { id: 'l2s16', lesson: 2, jp: 'じどうしゃのです。', cn: '是汽車的（書）。' },
+  // だれの～
+  { id: 'l2s17', lesson: 2, jp: 'あれは だれの かばんですか。', cn: '那是誰的皮包？' },
+  { id: 'l2s18', lesson: 2, jp: 'それは わたしの かばんです。', cn: '那是我的皮包。' },
+  { id: 'l2s19', lesson: 2, jp: 'あれは だれのですか。', cn: '那是誰的？（省略名詞）' },
+  { id: 'l2s20', lesson: 2, jp: 'わたしのです。', cn: '是我的。' },
+  // この/その/あの
+  { id: 'l2s21', lesson: 2, jp: 'この てちょうは わたしのです。', cn: '這記事本是我的。' },
+  { id: 'l2s22', lesson: 2, jp: 'あの てんいんさんは しんせつですね。', cn: '那位店員很親切呢。' },
+  { id: 'l2s23', lesson: 2, jp: 'どの えいがが おもしろいですか。', cn: '哪部電影好看？' },
+  { id: 'l2s24', lesson: 2, jp: 'こちらは しょうひんですか。', cn: '這是商品嗎？（更正式）' },
+  { id: 'l2s25', lesson: 2, jp: 'にほんの すしが すきです。', cn: '我喜歡日本壽司。' },
+
+  // ============ LESSON 3 ============
+  // ここ/そこ/あそこ 基本
+  { id: 'l3s01', lesson: 3, jp: 'ここは きょうしつです。', cn: '這裡是教室。' },
+  { id: 'l3s02', lesson: 3, jp: 'そこは かいぎしつではありません。', cn: '那裡不是會議室。' },
+  { id: 'l3s03', lesson: 3, jp: 'ここは おいしい りょうりてんですか。', cn: '這邊是好吃的料理店嗎？' },
+  // 名詞は場所です
+  { id: 'l3s04', lesson: 3, jp: 'でんわは にかいです。', cn: '電話在二樓。' },
+  // どこ/どちら
+  { id: 'l3s05', lesson: 3, jp: 'おてあらいは どこですか。', cn: '洗手間在哪裡？' },
+  { id: 'l3s06', lesson: 3, jp: 'あそこです。', cn: '在那裡。' },
+  { id: 'l3s07', lesson: 3, jp: 'かいしゃは どちらですか。', cn: '公司在哪裡？（禮貌）' },
+  { id: 'l3s08', lesson: 3, jp: 'たいわんトヨタしゃです。', cn: '是台灣 TOYOTA 公司。' },
+  // 口語對話
+  { id: 'l3s09', lesson: 3, jp: 'いま、どこ。', cn: '現在在哪？（口語）' },
+  { id: 'l3s10', lesson: 3, jp: 'こっち。', cn: '這邊！（口語）' },
+  // 國家・大學
+  { id: 'l3s11', lesson: 3, jp: 'おくには どちらですか。', cn: '您的國家是哪裡？' },
+  { id: 'l3s12', lesson: 3, jp: 'にほんです。', cn: '是日本。' },
+  { id: 'l3s13', lesson: 3, jp: 'だいがくは どちらですか。', cn: '大學是哪一所？' },
+  { id: 'l3s14', lesson: 3, jp: 'しりつ たんこうだいがくです。', cn: '是私立淡江大學。' },
+  { id: 'l3s15', lesson: 3, jp: 'こていです。', cn: '在古亭。' },
+  // どこの～
+  { id: 'l3s16', lesson: 3, jp: 'これは どこの おちゃですか。', cn: '這是哪裡（製造）的茶？' },
+  { id: 'l3s17', lesson: 3, jp: 'にほんのです。', cn: '是日本（製）的。' },
+  { id: 'l3s18', lesson: 3, jp: 'イトウエンの おちゃです。', cn: '是伊藤園的茶。' },
+  // 價格
+  { id: 'l3s19', lesson: 3, jp: 'すみません、さしみていしょくは いくらですか。', cn: '請問，生魚片定食多少錢？' },
+  { id: 'l3s20', lesson: 3, jp: 'せんにひゃくごじゅうえんです。', cn: '是 1250 日圓。' },
+  { id: 'l3s21', lesson: 3, jp: 'これは いくらですか。', cn: '這個多少錢？' },
+  { id: 'l3s22', lesson: 3, jp: 'なんえんですか。', cn: '多少日圓？' },
+  { id: 'l3s23', lesson: 3, jp: 'なんげんですか。', cn: '多少台幣？' },
+  // 補充對話
+  { id: 'l3s24', lesson: 3, jp: 'こちらは わたしの ともだちです。', cn: '這位是我的朋友。（禮貌）' },
+  { id: 'l3s25', lesson: 3, jp: 'あちらは どなたですか。', cn: '那位是哪位？（禮貌）' },
+];
+
+// Classify by length
+SENTENCES.forEach(s => {
+  const len = s.jp.replace(/[、。, ]/g, '').length;
+  if (len < 12) s.diff = 'short';
+  else if (len < 22) s.diff = 'medium';
+  else s.diff = 'long';
+});
+
+/* ============================================================
+   SRS STATE
+============================================================ */
+const STORE_KEY = 'dict-l123-srs-v1';
+const INTERVALS = [0, 10, 60, 1440, 4320, 10080, 20160, 43200];
+
+function getSrsState() {
+  const raw = storage.get(STORE_KEY);
+  if (raw) { try { return JSON.parse(raw); } catch (e) {} }
+  const state = {};
+  SENTENCES.forEach(s => { state[s.id] = { level: 0, due: 0, correct: 0, wrong: 0, lastSeen: 0 }; });
+  return state;
+}
+function saveSrsState() { storage.set(STORE_KEY, JSON.stringify(srs)); }
+
+let srs = getSrsState();
+SENTENCES.forEach(s => { if (!srs[s.id]) srs[s.id] = { level: 0, due: 0, correct: 0, wrong: 0, lastSeen: 0 }; });
+
+let sessionStats = {
+  reviewed: parseInt(storage.get('dict-l123-reviewed') || '0'),
+  correct: parseInt(storage.get('dict-l123-correct') || '0'),
+  date: storage.get('dict-l123-date') || '',
+};
+const today = new Date().toISOString().slice(0, 10);
+if (sessionStats.date !== today) {
+  sessionStats = { reviewed: 0, correct: 0, date: today };
+  storage.set('dict-l123-date', today);
+  storage.set('dict-l123-reviewed', '0');
+  storage.set('dict-l123-correct', '0');
+}
+
+function recordAnswer(id, correct) {
+  const s = srs[id];
+  if (!s) return;
+  const now = Date.now();
+  if (correct) { s.level = Math.min(7, s.level + 1); s.correct++; }
+  else { s.level = Math.max(0, s.level - 2); s.wrong++; }
+  s.lastSeen = now;
+  s.due = now + INTERVALS[Math.min(s.level, INTERVALS.length - 1)] * 60 * 1000;
+  saveSrsState();
+  sessionStats.reviewed++;
+  if (correct) sessionStats.correct++;
+  storage.set('dict-l123-reviewed', String(sessionStats.reviewed));
+  storage.set('dict-l123-correct', String(sessionStats.correct));
+  renderQuickStats();
+}
+
+let lastCard = null;
+
+function pickNextCard() {
+  const pool = SENTENCES.filter(s =>
+    activeLessons.includes(s.lesson) && activeDiffs.includes(s.diff)
+  );
+  if (pool.length === 0) return null;
+
+  if (priorityMode === 'random') {
+    let cands = pool;
+    if (cands.length > 1 && lastCard) cands = cands.filter(s => s.id !== lastCard);
+    return cands[Math.floor(Math.random() * cands.length)];
+  }
+
+  if (priorityMode === 'weak') {
+    // Sort by level ascending (weakest first), break ties randomly
+    const weighted = [];
+    pool.forEach(s => {
+      const w = Math.max(1, 8 - srs[s.id].level);
+      for (let i = 0; i < w; i++) weighted.push(s);
+    });
+    let cands = weighted;
+    if (lastCard) {
+      const filtered = cands.filter(s => s.id !== lastCard);
+      if (filtered.length > 0) cands = filtered;
+    }
+    return cands[Math.floor(Math.random() * cands.length)];
+  }
+
+  // default: SRS due-based
+  const now = Date.now();
+  const due = pool.filter(s => srs[s.id].lastSeen > 0 && srs[s.id].due <= now);
+  const fresh = pool.filter(s => srs[s.id].lastSeen === 0);
+  const waiting = pool.filter(s => srs[s.id].lastSeen > 0 && srs[s.id].due > now);
+
+  let candidates;
+  if (due.length > 0) candidates = due.sort((a, b) => srs[a.id].due - srs[b.id].due).slice(0, Math.min(5, due.length));
+  else if (fresh.length > 0) candidates = fresh.slice(0, Math.min(3, fresh.length));
+  else candidates = waiting.sort((a, b) => srs[a.id].due - srs[b.id].due).slice(0, 5);
+  if (candidates.length > 1 && lastCard) {
+    const filtered = candidates.filter(s => s.id !== lastCard);
+    if (filtered.length > 0) candidates = filtered;
+  }
+  return candidates[Math.floor(Math.random() * candidates.length)];
+}
+
+/* ============================================================
+   SPEECH
+============================================================ */
+const synth = window.speechSynthesis;
+let currentRate = 0.85;
+let selectedVoice = null;
+
+function populateVoices() {
+  if (!synth) return;
+  const voices = synth.getVoices().filter(v => v.lang.startsWith('ja'));
+  const select = document.getElementById('voice-select');
+  select.innerHTML = '';
+  if (voices.length === 0) { select.innerHTML = '<option>無日語音色</option>'; return; }
+  voices.forEach((v, i) => {
+    const opt = document.createElement('option');
+    opt.value = i;
+    opt.textContent = v.name.length > 26 ? v.name.slice(0, 24) + '…' : v.name;
+    select.appendChild(opt);
+  });
+  const preferred = voices.findIndex(v => /female|kyoko|haruka|sayaka|nanami|google/i.test(v.name));
+  select.value = preferred >= 0 ? preferred : 0;
+  selectedVoice = voices[parseInt(select.value)];
+  select.onchange = () => { selectedVoice = voices[parseInt(select.value)]; };
+}
+if (synth) { populateVoices(); synth.onvoiceschanged = populateVoices; }
+
+function speak(text, onStart, onEnd, rate) {
+  if (!synth || !text) { onEnd && onEnd(); return; }
+  synth.cancel();
+  const utter = new SpeechSynthesisUtterance(text);
+  utter.lang = 'ja-JP';
+  utter.rate = rate || currentRate;
+  if (selectedVoice) utter.voice = selectedVoice;
+  utter.onstart = () => onStart && onStart();
+  utter.onend = () => onEnd && onEnd();
+  utter.onerror = () => onEnd && onEnd();
+  synth.speak(utter);
+}
+
+/* ============================================================
+   FILTERS
+============================================================ */
+let activeLessons = [1, 2, 3];
+let activeDiffs = ['short', 'medium', 'long'];
+let priorityMode = 'due';
+
+document.querySelectorAll('[data-lesson]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('active');
+    activeLessons = Array.from(document.querySelectorAll('[data-lesson].active')).map(b => parseInt(b.dataset.lesson));
+    if (activeLessons.length === 0) { btn.classList.add('active'); activeLessons = [parseInt(btn.dataset.lesson)]; }
+    nextDictation();
+  });
+});
+document.querySelectorAll('[data-diff]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('active');
+    activeDiffs = Array.from(document.querySelectorAll('[data-diff].active')).map(b => b.dataset.diff);
+    if (activeDiffs.length === 0) { btn.classList.add('active'); activeDiffs = [btn.dataset.diff]; }
+    nextDictation();
+  });
+});
+document.querySelectorAll('[data-prio]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('[data-prio]').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    priorityMode = btn.dataset.prio;
+    nextDictation();
+  });
+});
+
+/* ============================================================
+   QUICK STATS
+============================================================ */
+function renderQuickStats() {
+  const now = Date.now();
+  const mastered = SENTENCES.filter(s => srs[s.id].level >= 4).length;
+  const dueCount = SENTENCES.filter(s => srs[s.id].lastSeen > 0 && srs[s.id].due <= now).length;
+  const fresh = SENTENCES.filter(s => srs[s.id].lastSeen === 0).length;
+  const total = SENTENCES.length;
+  document.getElementById('quick-stats').innerHTML = `
+    <div class="stat-card"><div class="label">Today reviewed</div><div class="value sumi">${sessionStats.reviewed}<span class="unit">次</span></div></div>
+    <div class="stat-card"><div class="label">Mastered</div><div class="value green">${mastered}<span class="unit">/ ${total}</span></div></div>
+    <div class="stat-card"><div class="label">Due now</div><div class="value kaki">${dueCount}<span class="unit">句</span></div></div>
+    <div class="stat-card"><div class="label">Not yet practiced</div><div class="value">${fresh}<span class="unit">句</span></div></div>
+  `;
+}
+
+/* ============================================================
+   DICTATION FLASHCARD
+============================================================ */
+let dictCurrent = null;
+let dictRevealed = false;
+let dictPlayCount = 0;
+let dictUserInput = '';
+let dictCurrentSpeed = 0.85;
+
+function renderDictation() {
+  const area = document.getElementById('dictation-area');
+  if (!dictCurrent) {
+    area.innerHTML = `
+      <div class="done-card">
+        <h2>太棒了！這個範圍目前都複習完了</h2>
+        <p>請更改篩選條件，或過一陣子再回來。</p>
+        <div class="next-time" id="next-due-info"></div>
+      </div>
+    `;
+    const pool = SENTENCES.filter(s =>
+      activeLessons.includes(s.lesson) && activeDiffs.includes(s.diff) && srs[s.id].lastSeen > 0
+    );
+    if (pool.length > 0) {
+      pool.sort((a, b) => srs[a.id].due - srs[b.id].due);
+      const nextK = pool[0];
+      const diff = srs[nextK.id].due - Date.now();
+      const minutes = Math.ceil(diff / 60000);
+      const hours = Math.floor(minutes / 60);
+      const days = Math.floor(hours / 24);
+      let timeStr = days > 0 ? `${days} 天後` : (hours > 0 ? `${hours} 小時後` : `${minutes} 分鐘後`);
+      const el = document.getElementById('next-due-info');
+      if (el) el.textContent = `下一張・${timeStr}到期`;
+    }
+    return;
+  }
+
+  const s = srs[dictCurrent.id];
+  const level = s.level;
+  const masteryPct = Math.min(100, (level / 6) * 100);
+
+  if (!dictRevealed) {
+    // FRONT: audio only
+    area.innerHTML = `
+      <div class="dictation-stage">
+        <div class="dictation-progress">第${['零','一','二','三'][dictCurrent.lesson]}課 · ${dictCurrent.diff === 'short' ? '短句' : dictCurrent.diff === 'medium' ? '中等' : '長句'}</div>
+        <div class="dictation-meta">Lv. ${level}<span class="mast-bar"><div style="width:${masteryPct}%"></div></span></div>
+        <div class="lesson-badge">第 ${dictCurrent.lesson} 課</div>
+        <div class="audio-front">
+          <button class="big-play-btn" id="big-play">♪</button>
+          <div class="play-hint">點按鈕播放，聽完寫出平假名</div>
+          <div class="play-count" id="play-count">已播放 ${dictPlayCount} 次</div>
+          <div class="replay-controls">
+            <button class="speed-btn ${dictCurrentSpeed === 0.6 ? 'active' : ''}" data-speed="0.6">慢速</button>
+            <button class="speed-btn ${dictCurrentSpeed === 0.85 ? 'active' : ''}" data-speed="0.85">正常</button>
+            <button class="speed-btn ${dictCurrentSpeed === 1.05 ? 'active' : ''}" data-speed="1.05">快速</button>
+          </div>
+        </div>
+        <div class="typing-area">
+          <input type="text" class="typing-input" id="typing-input" placeholder="在這裡寫出平假名（也可只在心裡默寫）" value="${dictUserInput.replace(/"/g, '&quot;')}" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+          <div class="typing-hint">寫完後按 Enter 揭曉答案 / 也可空白</div>
+        </div>
+        <div class="reveal-buttons">
+          <button class="fc-btn show" id="fc-show">揭曉答案</button>
+        </div>
+        <div class="kb-hint"><kbd>Space</kbd> 重播 ・ <kbd>Enter</kbd> 揭曉 ・ <kbd>1</kbd> 不會 ・ <kbd>2</kbd> 會了</div>
+      </div>
+    `;
+
+    const playBtn = document.getElementById('big-play');
+    const playCountEl = document.getElementById('play-count');
+    const playCurrent = () => {
+      dictPlayCount++;
+      playCountEl.textContent = `已播放 ${dictPlayCount} 次`;
+      playBtn.classList.add('speaking');
+      speak(dictCurrent.jp, null, () => playBtn.classList.remove('speaking'), dictCurrentSpeed);
+    };
+    playBtn.addEventListener('click', playCurrent);
+
+    document.querySelectorAll('.speed-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        dictCurrentSpeed = parseFloat(btn.dataset.speed);
+        document.querySelectorAll('.speed-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+
+    const input = document.getElementById('typing-input');
+    input.addEventListener('input', e => { dictUserInput = e.target.value; });
+    input.addEventListener('keydown', e => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        revealDictation();
+      }
+    });
+
+    document.getElementById('fc-show').addEventListener('click', revealDictation);
+
+    // Auto-play on first card display
+    if (dictPlayCount === 0) {
+      setTimeout(playCurrent, 350);
+    }
+    // Focus the input
+    setTimeout(() => input.focus(), 400);
+
+  } else {
+    // BACK: reveal answer
+    const userText = dictUserInput.trim();
+    const correctText = dictCurrent.jp;
+    const diffHtml = userText ? renderDiff(userText, correctText) : '';
+
+    area.innerHTML = `
+      <div class="dictation-stage">
+        <div class="dictation-progress">第${['零','一','二','三'][dictCurrent.lesson]}課 · ${dictCurrent.diff === 'short' ? '短句' : dictCurrent.diff === 'medium' ? '中等' : '長句'}</div>
+        <div class="dictation-meta">Lv. ${level}<span class="mast-bar"><div style="width:${masteryPct}%"></div></span></div>
+        <div class="lesson-badge">第 ${dictCurrent.lesson} 課</div>
+        <div class="answer-reveal">
+          <div class="answer-jp">${dictCurrent.jp}</div>
+          <div class="answer-cn">${dictCurrent.cn}</div>
+          ${userText ? `<div class="user-attempt"><span class="lbl">你寫的</span>${diffHtml}</div>` : ''}
+          <div class="reveal-buttons">
+            <button class="fc-btn replay" id="fc-replay">♪ 重聽</button>
+            <button class="fc-btn wrong" id="fc-wrong">不會 / 再來</button>
+            <button class="fc-btn right" id="fc-right">會了 ✓</button>
+          </div>
+        </div>
+        <div class="kb-hint"><kbd>Space</kbd> 重聽 ・ <kbd>1</kbd> 不會 ・ <kbd>2</kbd> 會了</div>
+      </div>
+    `;
+    document.getElementById('fc-replay').addEventListener('click', () => speak(dictCurrent.jp, null, null, dictCurrentSpeed));
+    document.getElementById('fc-wrong').addEventListener('click', () => answerDictation(false));
+    document.getElementById('fc-right').addEventListener('click', () => answerDictation(true));
+    // Auto-play the answer
+    setTimeout(() => speak(dictCurrent.jp, null, null, dictCurrentSpeed), 250);
+  }
+}
+
+// Simple character-level diff highlighting
+function renderDiff(user, correct) {
+  // Strip punctuation/spaces for comparison; mark mismatches in user input
+  const normalize = s => s.replace(/[、。, !！?？]/g, '').replace(/\s+/g, '');
+  const u = user;
+  const c = normalize(correct);
+  const un = normalize(u);
+  // Check if exact match (ignoring punctuation/spaces)
+  if (un === c) {
+    return `<span class="diff-mark correct">${u}</span> <span style="color:var(--green);font-style:italic;font-size:12px;margin-left:8px;">✓ 完全正確</span>`;
+  }
+  // Char-by-char highlight
+  let html = '';
+  const len = Math.max(u.length, c.length);
+  let ui = 0, ci = 0;
+  // Walk through user input, marking characters not in correct position
+  for (let i = 0; i < u.length; i++) {
+    const ch = u[i];
+    if (/[、。, !！?？\s]/.test(ch)) { html += ch; continue; }
+    if (ch === c[ci]) {
+      html += `<span class="diff-mark correct">${ch}</span>`;
+      ci++;
+    } else {
+      html += `<span class="diff-mark">${ch}</span>`;
+      // try to resync
+      const nextMatch = c.indexOf(ch, ci);
+      if (nextMatch >= 0 && nextMatch - ci <= 3) ci = nextMatch + 1;
+    }
+  }
+  return html;
+}
+
+function revealDictation() {
+  dictRevealed = true;
+  renderDictation();
+}
+
+function answerDictation(correct) {
+  recordAnswer(dictCurrent.id, correct);
+  lastCard = dictCurrent.id;
+  nextDictation();
+}
+
+function nextDictation() {
+  dictCurrent = pickNextCard();
+  dictRevealed = false;
+  dictPlayCount = 0;
+  dictUserInput = '';
+  renderDictation();
+}
+
+document.addEventListener('keydown', (e) => {
+  const dictPanel = document.getElementById('panel-dictation');
+  if (!dictPanel.classList.contains('active') || !dictCurrent) return;
+
+  // Don't interfere with typing in input
+  const input = document.getElementById('typing-input');
+  const isTyping = document.activeElement === input;
+
+  if (e.key === ' ' && !isTyping) {
+    e.preventDefault();
+    if (!dictRevealed) {
+      document.getElementById('big-play')?.click();
+    } else {
+      document.getElementById('fc-replay')?.click();
+    }
+  } else if (e.key === 'Enter' && !isTyping && !dictRevealed) {
+    e.preventDefault();
+    revealDictation();
+  } else if (dictRevealed && !isTyping) {
+    if (e.key === '1' || e.key === 'x') answerDictation(false);
+    else if (e.key === '2' || e.key === 'c') answerDictation(true);
+  }
+});
+
+/* ============================================================
+   BROWSE
+============================================================ */
+let browseLessons = [1, 2, 3];
+document.querySelectorAll('[data-bl]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('active');
+    browseLessons = Array.from(document.querySelectorAll('[data-bl].active')).map(b => parseInt(b.dataset.bl));
+    if (browseLessons.length === 0) { btn.classList.add('active'); browseLessons = [parseInt(btn.dataset.bl)]; }
+    renderBrowse();
+  });
+});
+
+function renderBrowse() {
+  const area = document.getElementById('browse-area');
+  const items = SENTENCES.filter(s => browseLessons.includes(s.lesson));
+  area.innerHTML = items.map(s => {
+    const level = srs[s.id].level;
+    return `
+      <div class="browse-item" data-jp="${s.jp.replace(/"/g, '&quot;')}">
+        <div class="lesson-tag">L${s.lesson}</div>
+        <div class="content">
+          <div class="jp">${s.jp}</div>
+          <div class="cn">${s.cn}</div>
+        </div>
+        <div class="mastery-dot" style="background:var(--m${Math.min(6, level)})" title="Lv. ${level}"></div>
+        <button class="play-btn">♪</button>
+      </div>
+    `;
+  }).join('');
+
+  area.querySelectorAll('.browse-item').forEach(item => {
+    const jp = item.dataset.jp;
+    const playBtn = item.querySelector('.play-btn');
+    const play = () => {
+      area.querySelectorAll('.browse-item').forEach(i => i.classList.remove('speaking'));
+      item.classList.add('speaking');
+      speak(jp, null, () => item.classList.remove('speaking'));
+    };
+    playBtn.addEventListener('click', play);
+    item.addEventListener('click', e => {
+      if (e.target !== playBtn) play();
+    });
+  });
+}
+
+/* ============================================================
+   PROGRESS
+============================================================ */
+function renderProgress() {
+  const container = document.getElementById('progress-content');
+  let html = '';
+  [1, 2, 3].forEach(lesson => {
+    const items = SENTENCES.filter(s => s.lesson === lesson);
+    const mastered = items.filter(s => srs[s.id].level >= 4).length;
+    html += `
+      <div class="progress-section">
+        <h3>第 ${lesson} 課 <span class="meta">${mastered} / ${items.length} mastered</span></h3>
+        <div class="heatmap">
+          ${items.map((s, i) => {
+            const level = srs[s.id].level;
+            return `<div class="hcard" data-jp="${s.jp.replace(/"/g, '&quot;')}" data-mastery="${Math.min(6, level)}" title="Lv ${level} · ${srs[s.id].correct}對/${srs[s.id].wrong}錯 · ${s.jp}">
+              <div class="hc-num">${String(i + 1).padStart(2, '0')}</div>
+              <div class="hc-jp">${s.jp.length > 16 ? s.jp.slice(0, 14) + '…' : s.jp}</div>
+            </div>`;
+          }).join('')}
+        </div>
+      </div>
+    `;
+  });
+  container.innerHTML = html;
+  container.querySelectorAll('.hcard').forEach(card => card.addEventListener('click', () => speak(card.dataset.jp)));
+}
+
+document.getElementById('reset-all').addEventListener('click', () => {
+  if (!confirm('確定要清除聽寫練習所有資料嗎？此操作無法復原。')) return;
+  storage.remove(STORE_KEY);
+  storage.remove('dict-l123-reviewed');
+  storage.remove('dict-l123-correct');
+  storage.remove('dict-l123-date');
+  srs = getSrsState();
+  SENTENCES.forEach(s => { if (!srs[s.id]) srs[s.id] = { level: 0, due: 0, correct: 0, wrong: 0, lastSeen: 0 }; });
+  sessionStats = { reviewed: 0, correct: 0, date: today };
+  storage.set('dict-l123-date', today);
+  renderQuickStats();
+  renderProgress();
+  renderBrowse();
+  if (document.getElementById('panel-dictation').classList.contains('active')) nextDictation();
+});
+
+/* ============================================================
+   TABS
+============================================================ */
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('panel-' + tab.dataset.tab).classList.add('active');
+    synth && synth.cancel();
+    if (tab.dataset.tab === 'progress') renderProgress();
+    if (tab.dataset.tab === 'browse') renderBrowse();
+  });
+});
+
+/* ============================================================
+   INIT
+============================================================ */
+renderQuickStats();
+nextDictation();
+renderBrowse();
+setInterval(renderQuickStats, 60000);
+
+</script>
+</body>
+</html>
